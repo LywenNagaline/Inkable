@@ -1,0 +1,34 @@
+{
+    "name": "projet-06-inkable",
+    "version": "1.0.0",
+    "description": "Projet INKABLE",
+    "author": "",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "heroku-postbuild": "npm i --force && cd front-vue && npm i --force && cd ../back && npm i --force",
+        "start": "concurrently --kill-others 'npm run back' 'npm run front-vue'",
+        "front-vue": "cd front-vue && npm run build",
+        "back": "cd back && npm run dev"
+    },
+    "main": "vetur.config.js",
+    "directories": {
+        "doc": "docs"
+    },
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/O-clock-Daguerre/projet-06-inkable/issues"
+    },
+    "homepage": "https://github.com/O-clock-Daguerre/projet-06-inkable#readme",
+    "devDependencies": {
+        "vue-cli-plugin-cloudinary": "~0.0.6",
+        "webpack": "^5.74.0",
+        "webpack-cli": "^4.10.0"
+    },
+    "engines": {
+        "node": "15.x"
+    },
+    "dependencies": {
+        "cloudinary-vue": "^1.0.0",
+        "concurrently": "^7.3.0"
+    }
+}

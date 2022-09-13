@@ -1,0 +1,48 @@
+{
+  "name": "projet-06-inkable",
+  "version": "1.0.0",
+  "description": "Projet INKABLE",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "resetDB": "sqitch revert -y; sqitch deploy; DEBUG=import:* psql -d inkable -f ./data/seeding_V2.sql",
+    "start": "node .",
+    "dev": "DEBUG=*,-express*,-sequelize*,-nodemon*,-body-parser* npx nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/O-clock-Daguerre/projet-06-inkable.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/O-clock-Daguerre/projet-06-inkable/issues"
+  },
+  "homepage": "https://github.com/O-clock-Daguerre/projet-06-inkable#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cloudinary": "^1.30.1",
+    "cors": "^2.8.5",
+    "debug": "^2.6.9",
+    "dotenv": "^16.0.1",
+    "email-validator": "^2.0.4",
+    "express": "^4.18.1",
+    "express-jsdoc-swagger": "^1.8.0",
+    "http": "^0.0.1-security",
+    "joi": "^17.6.0",
+    "jsdoc": "^3.6.11",
+    "jsonwebtoken": "^8.5.1",
+    "pg": "^8.7.3",
+    "sequelize": "^6.21.3"
+  },
+  "devDependencies": {
+    "eslint": "^8.22.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
+    "eslint-plugin-react": "^7.30.1",
+    "eslint-plugin-react-hooks": "^4.6.0"
+  }
+}

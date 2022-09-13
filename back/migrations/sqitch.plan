@@ -1,0 +1,7 @@
+%syntax-version=1.0.0
+%project=inkable
+
+init 2022-08-17T08:39:03Z Lucas Ragot <lucasragot1@gmail.com> # initialisation de la bdd
+seeding 2022-08-31T10:37:31Z Lucas Ragot <lucasragot1@gmail.com> # seeding
+notif 2022-09-04T07:42:31Z Celine Viala <celin68644@gmail.com> # add notif system
+seedingStylesNotifs 2022-09-04T07:59:59Z Celine Viala <celin68644@gmail.com> # add seeding for styles and notifs

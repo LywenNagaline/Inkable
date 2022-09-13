@@ -1,0 +1,50 @@
+################################################################################
+# Fichier de test des routes HTTP de l'API
+# Nécessite l'extension REST Client pour VSCode
+# https://marketplace.visualstudio.com/items?itemName=humao.rest-client
+################################################################################
+@endpoint = http://localhost:{{$dotenv PORT}}/api
+
+###test
+GET {{endpoint}}/
+
+###test2
+GET {{endpoint}}/ping
+
+
+###test2
+GET {{endpoint}}/pro
+
+###récupère un projet avec son id
+GET {{endpoint}}/projet/2
+
+###Supprime un projet d'après son id
+DELETE {{endpoint}}/projet/1
+
+
+###Crée un consumer
+POST {{endpoint}}/consumer
+content-type: application/json
+
+{
+	"email": "a@a.gmail",
+    "first_name":"toto",
+    "last_name":"dupont",
+    "password":"123456",
+    "role":"consumer",
+    "date_of_birth":"01/01/2000"
+}
+
+###Crée un projet
+POST {{endpoint}}/projet
+content-type: application/json
+
+{
+	"title": "titre projet",
+    "description":"decription du projet",
+    "status":"en attente",
+    "color":true,
+    "area":"pied",
+    "pro_id":1,
+    "consumer_id":1
+}
